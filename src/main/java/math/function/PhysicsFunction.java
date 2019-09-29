@@ -42,7 +42,7 @@ public class PhysicsFunction implements FunctionInterface {
      */
     @Override
     public double getValue(double x) {
-        return 80 * Math.pow(Math.E, -x * 4 / 0.5) + 0.5 * 9.8 / x * (Math.pow(Math.E, -x * 4 / 0.5) - 1);
+        return 80 * Math.pow(Math.E, -x * 4 / 0.5) + 0.5 * 9.8 / x * (Math.pow(Math.E, -x * 4 / 0.5) - 1) - 10;
     }
 
     /**
