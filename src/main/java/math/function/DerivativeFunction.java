@@ -95,4 +95,14 @@ public class DerivativeFunction implements FunctionInterface {
     public boolean areLinesVisible() {
         return true;
     }
+
+    /**
+     * Checks if only the function's bounds need to be rendered
+     *
+     * @return
+     */
+    @Override
+    public boolean onlyRenderBounds() {
+        return false;
+    }
 }

@@ -132,6 +132,12 @@ public abstract class GraphAction implements ActionListener, GraphDataProvider {
      * @param function function
      */
     private void fillSeries(XYSeries series, FunctionInterface function) {
+        if (function.onlyRenderBounds()) {
+            series.add(function.getLeftMostX(), 0);
+            series.add(function.getRightMostX(), 0);
+            return;
+        }
+
         double step = (function.getRightMostX() - function.getLeftMostX()) / (double) function.getPointCount();
 
         for (int i = 0; i < function.getPointCount(); i++) {

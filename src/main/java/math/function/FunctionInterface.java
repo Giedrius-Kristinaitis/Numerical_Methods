@@ -68,4 +68,11 @@ public interface FunctionInterface {
      * @return
      */
     boolean areLinesVisible();
+
+    /**
+     * Checks if only the function's bounds need to be rendered
+     *
+     * @return
+     */
+    boolean onlyRenderBounds();
 }
