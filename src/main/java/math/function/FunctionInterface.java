@@ -54,4 +54,11 @@ public interface FunctionInterface {
      * Does any actions the function requires
      */
     void initialize();
+
+    /**
+     * Checks if the function points' shapes are visible
+     *
+     * @return
+     */
+    boolean areShapesVisible();
 }

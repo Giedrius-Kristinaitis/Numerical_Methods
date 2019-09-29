@@ -1,7 +1,7 @@
 package action;
 
-import math.function.FunctionInterface;
 import graph.GraphDataProvider;
+import math.function.FunctionInterface;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -81,7 +81,7 @@ public abstract class GraphAction implements ActionListener, GraphDataProvider {
         // set line colors
         for (int i = 0; i < functions.size(); i++) {
             renderer.setSeriesPaint(i, functions.get(i).getColor());
-            renderer.setSeriesShapesVisible(i, false);
+            renderer.setSeriesShapesVisible(i, functions.get(i).areShapesVisible());
         }
 
         // apply renderer

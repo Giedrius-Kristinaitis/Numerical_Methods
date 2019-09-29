@@ -75,4 +75,14 @@ public class TranscendentalFunction implements FunctionInterface {
     public void initialize() {
         // NOTHING TO DO
     }
+
+    /**
+     * Checks if the function points' shapes are visible
+     *
+     * @return
+     */
+    @Override
+    public boolean areShapesVisible() {
+        return false;
+    }
 }

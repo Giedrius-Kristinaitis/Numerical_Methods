@@ -59,4 +59,14 @@ public abstract class RootEstimate implements FunctionInterface {
     public int getPointCount() {
         return 200;
     }
+
+    /**
+     * Checks if the function points' shapes are visible
+     *
+     * @return
+     */
+    @Override
+    public boolean areShapesVisible() {
+        return false;
+    }
 }
