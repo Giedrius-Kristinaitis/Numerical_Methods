@@ -1,8 +1,6 @@
 package action;
 
-import math.function.PolynomialInterface;
-import math.function.MoreAccurateRootEstimate;
-import math.function.RoughRootEstimate;
+import math.function.*;
 
 /**
  * Plots root estimate functions
@@ -13,7 +11,8 @@ public class RootEstimateAction extends GraphAction {
      * Default class constructor
      */
     public RootEstimateAction(PolynomialInterface polynomial) {
-        super(new RoughRootEstimate(polynomial), new MoreAccurateRootEstimate(polynomial));
+        super(new RoughRootEstimate(polynomial), new MoreAccurateRootEstimate(polynomial),
+                new RoughRootEstimateBounds(polynomial), new MoreAccurateRootEstimateBounds(polynomial));
     }
 
     /**
