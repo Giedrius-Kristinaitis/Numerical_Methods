@@ -27,6 +27,7 @@ public class Main {
     private FunctionInterface derivative;
     private FunctionInterface polynomialFunction;
     private FunctionInterface polynomialDerivative;
+    private FunctionInterface physicsFunction;
 
     // actions
     private GraphAction rootEstimateAction;
@@ -39,6 +40,7 @@ public class Main {
     private ScanningAction changingStepScanningActionFx;
     private ScanningAction simpleIterationActionFx;
     private ScanningAction newtonActionFx;
+    private ScanningAction physicsAction;
 
     /**
      * Default class constructor
@@ -60,6 +62,7 @@ public class Main {
         derivative = new DerivativeFunction();
         polynomialFunction = new PolynomialFunction(polynomial);
         polynomialDerivative = new PolynomialFunctionDerivative();
+        physicsFunction = new PhysicsFunction();
 
         rootEstimateAction = new RootEstimateAction(polynomial);
         transcendentalAction = new FunctionPlotAction(transcendentalFunction);
@@ -71,6 +74,7 @@ public class Main {
         changingStepScanningActionFx = new ChangingStepScanningMethodAction(polynomialFunction);
         simpleIterationActionFx = new SimpleIterationAction(polynomialFunction);
         newtonActionFx = new NewtonAction(polynomialDerivative, polynomialFunction);
+        physicsAction = new ChangingStepScanningMethodAction(physicsFunction);
     }
 
     /**
@@ -115,6 +119,7 @@ public class Main {
         eighth.addActionListener(changingStepScanningActionFx);
         nineth.addActionListener(simpleIterationActionFx);
         tenth.addActionListener(newtonActionFx);
+        eleventh.addActionListener(physicsAction);
 
         frame.add(first).setBounds(0, 0, 512, 50);
         frame.add(second).setBounds(0, 50, 512, 50);
