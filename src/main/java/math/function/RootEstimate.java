@@ -67,6 +67,16 @@ public abstract class RootEstimate implements FunctionInterface {
      */
     @Override
     public boolean areShapesVisible() {
+        return true;
+    }
+
+    /**
+     * Checks if the function's lines are visible
+     *
+     * @return
+     */
+    @Override
+    public boolean areLinesVisible() {
         return false;
     }
 }

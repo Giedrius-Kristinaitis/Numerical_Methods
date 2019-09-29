@@ -61,4 +61,11 @@ public interface FunctionInterface {
      * @return
      */
     boolean areShapesVisible();
+
+    /**
+     * Checks if the function's lines are visible
+     *
+     * @return
+     */
+    boolean areLinesVisible();
 }

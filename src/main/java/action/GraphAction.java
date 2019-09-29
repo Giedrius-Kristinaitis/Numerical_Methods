@@ -82,6 +82,7 @@ public abstract class GraphAction implements ActionListener, GraphDataProvider {
         for (int i = 0; i < functions.size(); i++) {
             renderer.setSeriesPaint(i, functions.get(i).getColor());
             renderer.setSeriesShapesVisible(i, functions.get(i).areShapesVisible());
+            renderer.setSeriesLinesVisible(i, functions.get(i).areLinesVisible());
         }
 
         // apply renderer

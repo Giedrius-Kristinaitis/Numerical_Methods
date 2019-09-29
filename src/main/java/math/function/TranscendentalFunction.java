@@ -85,4 +85,14 @@ public class TranscendentalFunction implements FunctionInterface {
     public boolean areShapesVisible() {
         return false;
     }
+
+    /**
+     * Checks if the function's lines are visible
+     *
+     * @return
+     */
+    @Override
+    public boolean areLinesVisible() {
+        return true;
+    }
 }
